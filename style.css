@@ -7,6 +7,8 @@ body {
 	background-color: #168ef0;
 }
 
+/*Container*/
+
 .container {
 	width: 75%;
 	text-align: center;
@@ -14,6 +16,8 @@ body {
 	padding: 10px;
 	border-radius: 10px;
 }
+
+/*Countdown "timer"*/
 
 .timer {
 	font-size: 3rem;
@@ -26,6 +30,8 @@ body {
 	border-radius: 5px;
 	box-shadow: 0 0 20px black;
 }
+
+/*Buttons*/
 
 button {
 	margin: 1rem;
@@ -42,6 +48,8 @@ button {
 	transition: 0.3s;
 }
 
+
+
 button:active {
 	background-color: #052a6e;
 }
@@ -49,6 +57,8 @@ button:active {
 button:hover {
 	transform: scale(1.1);
 }
+
+/*Settings div*/
 
 .settings {
 	display: none;
@@ -60,6 +70,7 @@ button:hover {
 	width: 80%;
 }
 
+/*The sound div element inside the settings div element*/
 
 .settings .sound {
 	position: relative;
@@ -68,6 +79,8 @@ button:hover {
 	width: auto;
 	height: auto;
 }
+
+/*Footer*/
 
 .footer {
 	color: white;

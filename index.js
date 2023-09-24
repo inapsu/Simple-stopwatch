@@ -3,7 +3,6 @@
 		const MinutesContainer = document.getElementById("minutes");
 		const SecondsContainer = document.getElementById("seconds");
 		const MillisecondsContainer = document.getElementById("milliseconds");
-		const YearCopyright = document.getElementById("year");
 
 		const start = document.getElementById("start");
 		const stop = document.getElementById("stop");
@@ -16,11 +15,14 @@
 		let milliseconds = 00;
 		let interval;
 
+		//Check if is in mobile or not :
+
 		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 			document.getElementById("timer").style.fontSize = "2rem";
+			console.log("Running in mobile")
 		}
 		else {
-			// false for not mobile device
+			console.log("Running in desktop")
 		}
 
 		// Timer :
