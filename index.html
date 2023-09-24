@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple Stopwatch</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<audio id="ticking" preload="auto">
+		<source src="ticking.ogg" type="audio/ogg">
+	</audio>
+
+	<div class="container">
+		<div class="timer" id="timer">
+			<span id="hours">00</span>:
+			<span id="minutes">00</span>:
+			<span id="seconds">00</span>:
+			<span id="milliseconds">00</span>
+		</div>
+		<div class="timercontrols">
+			<button id="start">Start Timer</button>
+			<button id="stop">Stop Timer</button>
+			<button id="reset">Reset Timer</button>
+		</div>
+		<br>
+		<hr>
+		<button onclick="openSettings()">Toogle Settings</button>
+		<div class="settings" id="settings">
+			<div class="sound">
+				<h3>Sound : </h3>
+				<input type="checkbox" id="sound" checked>
+				<label for="sound"> Enable Sound?</label>
+			</div>
+			<br>
+		</div>
+		<br>
+		<hr>
+		<footer class="footer">
+			<h6 xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Simple Countdown</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.youtube.com/channel/UCSD016kx63Kgj1TS_z5lFbw">INapSu_</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></h6>
+		</footer>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+</html>
