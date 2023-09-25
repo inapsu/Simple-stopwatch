@@ -5,8 +5,8 @@ This project was created by INapSu_ using html javascript and css.
 
 - [x] Easy and simple interface
 - [x] Tick ​​sound every second
-- [x] Mobile friendly ( Still bugged )
-- [ ] Custom tick sound
+- [x] Mobile friendly
+- [x] Custom tick sound
 - [ ] Lap system
 
 # Note :
