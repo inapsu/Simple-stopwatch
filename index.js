@@ -9,6 +9,8 @@
 		const reset = document.getElementById("reset");
 		const audio = document.getElementById("ticking");
 
+		const customsound = document.getElementById("customsound");
+
 		let hours = 00;
 		let minutes = 00;
 		let seconds = 00;
@@ -107,7 +109,7 @@
 		stop.addEventListener("click", stopTimer);
 		reset.addEventListener("click", resetTimer);
 
-		// Settings
+		// Settings - Disable/Enable sound
 
 		function openSettings() {
 			var sc = document.getElementById("settings");
@@ -119,3 +121,26 @@
 			}
 
 		}
+
+		//Settings - Set to default sound
+
+		function defaultSound() {
+			audio.setAttribute("src", "ticking.ogg");
+			document.getElementById("currsound").innerHTML = "Current sound : default";
+		}
+
+		//Settings - Set Custom sound
+
+		customsound.onchange = function () {
+			var files = this.files;
+			var fileURL = URL.createObjectURL(files[0]);
+			var extension = document.querySelector('#customsound').value.split('.').pop();
+			if (extension === "ogg") {
+				audio.setAttribute("src", fileURL);
+				document.getElementById("currsound").innerHTML = "Current sound : " + customsound.files[0].name;
+			}
+			else {
+				alert("Invalid extension file!")
+			}
+		}
+

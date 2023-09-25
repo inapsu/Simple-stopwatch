@@ -2,7 +2,6 @@ body {
 	font-family: arial;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 	display: flex;
 	background-color: #168ef0;
 }
@@ -39,7 +38,7 @@ button {
 	border-radius: 4px;
 	outline: none;
 	height: 43px;
-	width: auto;
+	width: 100px;
 	background-color: #0d62ff;
 	color: white;
 	font-weight: bold;
@@ -61,7 +60,6 @@ button:hover {
 /*Settings div*/
 
 .settings {
-	display: none;
 	margin: auto;
 	border-radius: 5px;
 	background-color: white;
@@ -78,6 +76,38 @@ button:hover {
 	margin: 10px;
 	width: auto;
 	height: auto;
+}
+
+.sound input[type="file"] {
+	opacity: 0;
+	width: 0.1px;
+	height: 0.1px;
+	position: absolute;
+}
+
+.inputfile label{
+	display: block;
+	position: relative;
+	margin: auto;
+	width: 100px;
+	height: 43px;
+	border-radius: 4px;
+	background: #0d62ff;
+	box-shadow: 0 0 5px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.inputfile label:active {
+	background-color: #052a6e;
+}
+
+.inputfile label:hover {
+	transform: scale(1.1);
 }
 
 /*Footer*/
