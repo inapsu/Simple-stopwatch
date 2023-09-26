@@ -10,13 +10,14 @@
 		const audio = document.getElementById("ticking");
 
 		const customsound = document.getElementById("customsound");
+		let fileURL
 
 		let hours = 00;
 		let minutes = 00;
 		let seconds = 00;
 		let milliseconds = 00;
 		let interval;
-
+		
 		//Check if is in mobile or not :
 
 		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -125,6 +126,8 @@
 		//Settings - Set to default sound
 
 		function defaultSound() {
+			fileURL = null;
+			document.querySelector('#customsound').value = null;
 			audio.setAttribute("src", "ticking.ogg");
 			document.getElementById("currsound").innerHTML = "Current sound : default";
 		}
@@ -132,8 +135,7 @@
 		//Settings - Set Custom sound
 
 		customsound.onchange = function () {
-			var files = this.files;
-			var fileURL = URL.createObjectURL(files[0]);
+			fileURL = URL.createObjectURL(this.files[0]);
 			var extension = document.querySelector('#customsound').value.split('.').pop();
 			if (extension === "ogg") {
 				audio.setAttribute("src", fileURL);
@@ -143,4 +145,3 @@
 				alert("Invalid extension file!")
 			}
 		}
-
